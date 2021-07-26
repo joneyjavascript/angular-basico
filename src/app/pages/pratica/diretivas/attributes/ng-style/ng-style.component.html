@@ -1,0 +1,21 @@
+<h1>Diretiva ngStyle </h1>
+
+<p>Adicionar e remover propriedades de estilo de um elemento</p>
+
+<h2>Mudando o tamanho da font dinamicamente</h2>
+
+<button (click)="fontSize = fontSize - 5">- Diminuir</button>
+<button (click)="fontSize = fontSize + 5">+ Aumentar</button>
+
+<p [ngStyle]="{ 'font-size.px': fontSize }">Escolha o tamanho da font ({{ fontSize }}px)</p>
+
+<h2>Modificar as propriedades Top e Left de um elemento</h2>
+
+<div class="position-relative canvas">
+    <div class="box" [ngStyle]="{ 'left.px':  positionX, 'top.px':  positionY }"></div>
+</div>
+
+<button (click)="positionX = positionX - 10">Left</button>
+<button (click)="positionX = positionX + 10">Right</button>
+<button (click)="positionY = positionY - 10">Up</button>
+<button (click)="positionY = positionY + 10">Down</button>

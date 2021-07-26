@@ -1,0 +1,30 @@
+
+<app-loading [show]="loading">Verificando credenciais, Aguarde...</app-loading>
+
+<h1>Login</h1>
+
+<form name="form" #form="ngForm" novalidate (ngSubmit)="form.form.valid && createSession()">
+    <div class="form-input">
+        <label for="login"><div class="form-input-label">Usuário</div> </label>
+        <input name="login" [(ngModel)]="model.login" required minlength="3" #login="ngModel" />
+
+        <!-- exibir mensagens de validações -->
+        <p class="form-input-error" *ngIf="login.hasError('required')">Campo obrigatório</p>
+        <p class="form-input-error" *ngIf="login.hasError('minlength')">No mínimo 3 caracteres</p>
+    </div>
+    
+    <div class="form-input">
+        <label for="password"><div class="form-input-label">Senha</div> </label>
+        <input name="password" [(ngModel)]="model.password" 
+           type="password" required minlength="3" pattern="[0-9]*" #password="ngModel" />
+
+        <!-- exibir mensagens de validações -->
+        <p class="form-input-error" *ngIf="password.hasError('required')">Campo obrigatório</p>
+        <p class="form-input-error" *ngIf="password.hasError('minlength')">No mínimo 3 caracteres</p>
+        <p class="form-input-error" *ngIf="password.hasError('pattern')">Formato inválido</p>
+    </div>
+
+    <div class="form-button-group">
+        <button type="submit">Acessar</button>
+    </div>
+</form>

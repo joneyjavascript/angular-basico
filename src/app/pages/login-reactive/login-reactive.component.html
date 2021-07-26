@@ -1,0 +1,32 @@
+
+<app-loading [show]="loading">Verificando credenciais, Aguarde...</app-loading>
+
+<h1>Login</h1>
+
+<form [formGroup]="form">
+
+    <div class="form-input">
+        <label>
+            <div class="form-input-label">Usuário</div>
+            <input formControlName="login" />
+            <p class="form-input-error" *ngIf="login && login.hasError('required')">Campo obrigatório</p>
+            <p class="form-input-error" *ngIf="login && login.hasError('minlength')">No mínimo 3 caracteres</p>
+        </label>
+    </div>
+    
+    <div class="form-input">
+        <label>
+            <div class="form-input-label">Senha</div>
+            <input formControlName="password" type="password" />
+            <p class="form-input-error" *ngIf="password && password.hasError('required')">Campo obrigatório</p>
+            <p class="form-input-error" *ngIf="password && password.hasError('minlength')">No mínimo 3 caracteres</p>
+            <p class="form-input-error" *ngIf="password && password.hasError('pattern')">Formato inválido</p>
+        </label>
+    </div>
+
+    <div class="form-button-group">
+        <button type="button" (click)="createSession()">Acessar</button>
+    </div>
+</form>
+
+

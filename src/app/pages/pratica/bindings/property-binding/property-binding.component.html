@@ -1,0 +1,25 @@
+<h1>Property Binding</h1>
+
+<p>É possível vincular o componente a uma propriedade do DOM, Componente e Diretiva Angular</p>
+
+<h2>Vinculando propriedade do DOM.</h2>
+
+<p>Vincular a propriedade "innerHTML" do DOM.</p>
+<div [innerHTML]="html"></div>
+
+<hr />
+
+<h2>Vincular a propriedade "show" e "local" do Component LoadingComponent.</h2>
+<div class="position-relative box">
+    <app-loading [show]="showLoading" [local]="true"></app-loading>
+</div>
+
+<hr />
+
+<h2>Vincular a propriedade "ngModel" da Directive NgModel.</h2>
+<div class="position-relative">
+    <input [ngModel]="model" class="w100p inputNgModel" />
+
+    <p>Exibindo valor da propriedade "model" do Component</p>
+    <p>{{ model }}</p>
+</div>

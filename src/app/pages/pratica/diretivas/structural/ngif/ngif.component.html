@@ -1,0 +1,29 @@
+<h1>Diretiva *ngIf </h1>
+
+<p>É possível gerenciar o que deve ou não ser processado dentro do template</p>
+
+<h2>Ocultar conteúdo temporáriamente</h2>
+
+<p *ngIf="loading">Aguardando 3 segundos para exibir o conteúdo...</p>
+
+<p *ngIf="!loading">
+    Conteúdo pronto para ser exibido. <button (click)="carregarDados()">aguardar novamente</button>
+</p>
+
+<hr />
+
+<h2>Exibir conteúdo correspondente ao valor</h2>
+
+<input type="range" min="0" max="100" [(ngModel)]="idade" />
+
+<p>Idade: {{ idade }}
+    (
+        <span *ngIf="idade < 12">Criança</span>
+        <span *ngIf="idade >= 12 && idade <= 17">Adolescente</span>
+        <span *ngIf="idade > 17 && idade < 65">Adulto</span>
+        <span *ngIf="idade > 65">Idoso</span>
+    )
+</p>
+
+
+

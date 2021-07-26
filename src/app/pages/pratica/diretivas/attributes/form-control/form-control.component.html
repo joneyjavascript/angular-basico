@@ -1,0 +1,25 @@
+<h1>Diretiva formControl (Reactive Forms)</h1>
+
+<p>Gerencia um campo de entrada de dados</p>
+
+<h2>Controle de um campo de entrada de dados isolado</h2>
+
+<input type="text" [formControl]="nome" >
+
+<p class="form-input-error" *ngIf="nome?.hasError('required')">Campo obrigatório</p>
+<p class="form-input-error" *ngIf="nome?.hasError('minlength')">Tem que ter 3 caracateres ou mais</p>
+<p class="form-input-error" *ngIf="nome?.hasError('nameExist')">Nome já cadastrado, escolha outro</p>
+<p class="form-input-error" *ngIf="nome.pending">validando....</p>
+
+<h3>Status do controlador</h3>
+
+<p>value: {{ nome.value }}</p>
+<p>control status: {{ nome.status }}</p>
+<p>touched: {{ nome.touched }}</p>
+<p>dirty: {{ nome.dirty }}</p>
+<p>errors: {{ nome.errors | json }}</p>
+
+<h3>Alterações de valores</h3>
+
+<div [innerHTML]="alteracoes"></div>
+

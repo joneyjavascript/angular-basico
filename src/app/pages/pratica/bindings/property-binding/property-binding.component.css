@@ -1,0 +1,14 @@
+
+.position-relative {
+    position:relative;
+}
+
+.box {
+    display:block;
+    width: 200px;
+    height: 200px;
+}
+
+.inputNgModel {
+    box-sizing: border-box;
+}

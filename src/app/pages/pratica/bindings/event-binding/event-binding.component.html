@@ -1,0 +1,13 @@
+<h1>Event Binding</h1>
+
+<h2>Vinculando eventos do DOM.</h2>
+
+<p>Vincular a evento de "click" do DOM.</p>
+<button (click)="clicou()" type="button">Clique aqui</button>
+<p class="gray">Veja o log no console</p>
+
+<hr />
+
+<p>Vincular a evento de "click", "blur" e "keydown" do DOM.</p>
+<input (click)="clicouNoCampo()" (blur)="saiuDoCampo()" (keydown)="pressionouUmaTecla($event)" />
+<p class="gray">Veja o log no console</p>

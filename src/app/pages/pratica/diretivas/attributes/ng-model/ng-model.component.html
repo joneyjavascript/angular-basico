@@ -1,0 +1,13 @@
+<h1>Diretiva ngModel (Template Driven Forms)</h1>
+
+<p>Gerencia um campo de entrada de dados</p>
+
+<h2>Controle de um campo de entrada de dados isolado</h2>
+
+<input type="text" required minlength="3" nameExist [(ngModel)]="nome" #controlador="ngModel">
+
+<p>value: {{ controlador.value }}</p>
+<p>control status: {{ controlador.status }}</p>
+<p>touched: {{ controlador.touched }}</p>
+<p>dirty: {{ controlador.dirty }}</p>
+<p>errors: {{ controlador.errors | json }}</p>

@@ -1,0 +1,15 @@
+<section>
+    <header>
+        <!--- usar seletor CSS para definir areas especificas dentro do conteúdo -->
+        <ng-content select="[header]"></ng-content>
+    </header>
+
+    <div class="conteudo">
+        <ng-content></ng-content>
+    </div>
+
+    <footer>
+        <!--- usar seletor CSS para definir areas especificas dentro do conteúdo -->
+        <ng-content select="[footer]"></ng-content>
+    </footer>
+</section>

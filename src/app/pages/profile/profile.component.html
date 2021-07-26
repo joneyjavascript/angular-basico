@@ -1,0 +1,51 @@
+
+<h1>Perfil</h1>
+
+<section>
+    <h2>Dados pessoais</h2>
+
+    <div class="position-relative p10">
+        <app-loading [show]="loadingProfile" [local]=true>Consultando dados do perfil, aguarde</app-loading>
+
+        <p>
+            <strong>Nome: </strong>
+            {{ userData?.nome }}
+        </p>
+
+        <p>
+            <strong>Idade: </strong>
+            {{ userData?.idade }}
+        </p>
+
+        <p>
+            <strong>Email: </strong>
+            {{ userData?.email }}
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Meus Pokemons</h2>
+
+    <div class="position-relative p10">
+        <app-loading [show]="loadingPokemons" [local]="true">Consultando minha Pokedex, aguarde...</app-loading>
+
+        <ul>
+            <li *ngFor="let pokemon of pokemons">
+                <a [href]="pokemon?.url" target="_blank">{{ pokemon?.name }}</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Meus Games</h2>
+
+    <div class="position-relative p10">
+        <ul>
+            <li *ngFor="let game of listaGames">
+                {{ game?.nome }} ({{ game?.ano }})
+            </li>
+        </ul>
+    </div>
+</section>

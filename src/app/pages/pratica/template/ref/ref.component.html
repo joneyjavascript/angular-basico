@@ -1,0 +1,45 @@
+<h1>Template Ref</h1>
+
+<p>Podemos referenciar qualquer elemento do template usando # (hashtag)</p>
+
+<h2>Template Ref #input1</h2>
+
+<input #input1 value="Botão" type="button"/>
+
+<p>Abaixo algumas propriedades do Elemento acima</p>
+
+<ul>
+    <li>type: {{ input1.type }}</li>
+    <li>innerHTML: {{ input1.innerHTML }}</li>
+    <li>value: {{ input1.value }}</li>
+</ul>
+
+
+<hr />
+
+<h2>Template Ref #loadingComponent</h2>
+<div class="position-relative">
+    <app-loading #loadingComponent [local]="true">Carregando dados, aguarde...</app-loading>
+    <p>Um conteúdo dinâmico que será carregado!</p>
+</div>
+
+<button (click)="loadingComponent.show = true">Habilitar Loading</button>
+<button (click)="loadingComponent.show = false">Desabilitar Loading</button>
+
+
+<h2>Template Ref #colunaD</h2>
+
+<table class="show-borders">
+    <tr>
+        <td #colunaA colspan="3">COLUNA A (colSpan: {{ colunaA.colSpan }})</td>
+        <td #colunaB colspan="3">COLUNA B (colSpan: {{ colunaB.colSpan }})</td>
+        <td #colunaC colspan="3">COLUNA C (colSpan: {{ colunaC.colSpan }})</td>
+    </tr>
+
+    <tr>
+        <td #colunaD colspan="1">COLUNA D (colSpan: {{ colunaD.colSpan }})</td>
+    </tr>
+</table>
+
+<button (click)="colunaD.colSpan = colunaD.colSpan - 1">- colSpan</button>
+<button (click)="colunaD.colSpan = colunaD.colSpan + 1">+ colSpan</button>

@@ -1,0 +1,73 @@
+<h1>Diretiva formGroup e formGroupName</h1>
+
+<p>Serve para agrupar formControls</p>
+
+<h2>Agrupando campos de endereço</h2>
+
+<form [formGroup]="form">
+    <fieldset>
+        <legend>Cadastro de usuário</legend>
+
+        <div class="form-input">
+            <label>Nome</label>
+            <input formControlName="nome" >
+        </div>
+
+        <div class="form-input">
+            <label>Receber notificações por email?</label>
+            <input formControlName="receber_email" type="checkbox" >
+        </div>
+
+        <div class="form-input" *ngIf="form.get('receber_email')?.value">
+            <label>Email</label>
+            <input formControlName="email" >
+            <p class="form-input-error" *ngIf="form.get('email') && form.get('email')?.hasError('required')">Campo obrigatório</p>
+        </div>
+        
+        <fieldset formGroupName="endereco">
+            <legend>Endereço</legend>
+
+            <div class="form-input">
+                <label>Rua</label>
+                <input formControlName="rua" />
+            </div>
+
+            <div class="form-input">
+                <label>Bairro</label>
+                <input formControlName="bairro" />
+            </div>
+
+            <div class="form-input">
+                <label>Número</label>
+                <input formControlName="numero" />
+            </div>
+            
+            <div class="form-input">
+                <label>Estado</label>
+                <select formControlName="estado_sigla">
+                    <option>SP</option>
+                    <option>BH</option>
+                    <option>RJ</option>
+                </select>
+            </div>
+
+            <div class="form-input">
+                <label>Cidade</label>
+                <input formControlName="cidade" />
+            </div>
+            
+        </fieldset>
+    </fieldset>
+</form>
+
+<p>Formulário STATUS</p>
+
+<pre>
+{{ form.status }}
+</pre>
+
+<p>Valores do formulário</p>
+
+<pre>
+{{ form.value | json }}
+</pre>

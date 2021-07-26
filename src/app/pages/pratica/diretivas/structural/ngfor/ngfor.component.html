@@ -1,0 +1,34 @@
+<h1>Diretiva *ngFor </h1>
+
+<p>É possível gerenciar laços de repeticação dentro do template</p>
+
+<h2>Nomes de usuários</h2>
+
+<ul>
+    <li *ngFor="let nome of listaNomes">
+        {{ nome }}
+    </li>
+</ul>
+
+<hr />
+
+<h2>Estoque</h2>
+
+<ul>
+    <li *ngFor="let item of listaItens; 
+                let idx = index; 
+                let isOdd = odd; 
+                let first = first; 
+                let last = last;">
+                
+        <span [class.odd]="isOdd">{{ idx }} - {{ item.nome }} - quantidade: {{ item.quantidade }}</span>
+
+        <span *ngIf="first"> - primeiro item</span>
+        <span *ngIf="last"> - último item</span>
+
+        <button (click)="listaItens.splice(idx, 1)">X</button>
+    </li>
+</ul>
+
+<button (click)="listaItens.push({ nome: 'novo item', quantidade: 0 })">Adicionar Item</button>
+

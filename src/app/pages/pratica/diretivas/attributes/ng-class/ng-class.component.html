@@ -1,0 +1,41 @@
+<h1>Diretiva ngClass </h1>
+
+<p>Adicionar e remover classes CSS</p>
+
+<h2>Classe</h2>
+
+<section>
+    <h2>Minhas Tarefas</h2>
+
+    <ul>
+        <li [ngClass]="{ 'tarefa-concluida': tarefa1Concluida }">
+            Enviar e-mail para lider do projeto 
+            <button (click)="tarefa1Concluida = !tarefa1Concluida">[ {{ tarefa1Concluida ? "X" : '_' }} ]</button>
+        </li>
+
+        <li [ngClass]="{ 'tarefa-concluida': tarefa2Concluida }">
+            Preparar ambiente de homologação
+            <button (click)="tarefa2Concluida = !tarefa2Concluida">[ {{ tarefa2Concluida ? "X" : '_' }} ]</button>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Outras Tarefas</h2>
+
+    <ul>
+        <li [ngClass]="classTarefa1">
+            Enviar e-mail para lider do projeto
+            <button (click)="classTarefa1['tarefa-concluida'] = !classTarefa1['tarefa-concluida']">[ {{ classTarefa1['tarefa-concluida'] ? "X" : '_' }} ]</button>
+            <button (click)="classTarefa1['tarefa-prioritaria'] = !classTarefa1['tarefa-prioritaria']">[ {{ classTarefa1['tarefa-prioritaria'] ? "X" : '_' }} ]</button>
+        </li>
+        <li [ngClass]="classTarefa2">
+            Preparar ambiente de homologação
+            <button (click)="classTarefa2['tarefa-concluida'] = !classTarefa2['tarefa-concluida']">[ {{ classTarefa2['tarefa-concluida'] ? "X" : '_' }} ]</button>
+            <button (click)="classTarefa2['tarefa-prioritaria'] = !classTarefa2['tarefa-prioritaria']">[ {{ classTarefa2['tarefa-prioritaria'] ? "X" : '_' }} ]</button>
+        </li>
+    </ul>
+
+    <div class="tarefa-prioritaria">Tarefas prioritarias</div>
+</section>
+

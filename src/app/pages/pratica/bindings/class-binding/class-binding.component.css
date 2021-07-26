@@ -1,0 +1,11 @@
+
+
+.crianca::after {
+    color: green;
+    content: " (CRIANÇA)";
+}
+
+.adulto::after {
+    color: blue;
+    content: " (ADULTO)";
+}

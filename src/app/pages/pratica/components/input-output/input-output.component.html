@@ -1,0 +1,18 @@
+<h1>Componentes com propriedades de entrada e eventos de saida </h1>
+
+<p>É possível usar o DECORATOR Input e Output nas propriedades dos nossos componentes para possibilitar a entrada e saída de dados do componente.</p>
+
+
+
+<h2>Componente customizado (numeric-stepper) com propriedades de entrada (value, step, min e max)  e evento de saida (change) </h2>
+
+<app-numeric-stepper [value]="valor1" [step]="5" [min]="0" [max]="100" (change)="valor1Alterado($event)"></app-numeric-stepper>
+
+<p>Valor da propriedade valor1: {{ valor1 }}</p>
+
+
+<h2>Componente com Two-way Data Binding (Input: value, Output: valueChange) </h2>
+
+<app-numeric-stepper-two-way [(value)]="valor2" [step]="5" [min]="0" [max]="100"></app-numeric-stepper-two-way>
+
+<p>Valor da propriedade valor2: {{ valor2 }}</p>

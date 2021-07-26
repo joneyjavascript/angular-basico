@@ -1,0 +1,7 @@
+<div *ngIf="show" [ngClass]="{ 'loading-local': local, 'loading-global': !local }">
+    <div #ref><ng-content></ng-content></div> 
+    <span *ngIf="ref.innerHTML.trim() == ''">
+        Carregando, aguarde...
+    </span>
+</div>
+

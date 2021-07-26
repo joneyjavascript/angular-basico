@@ -1,0 +1,23 @@
+<h1>Elemento ng-container</h1>
+
+<p>Podemos usar o elemento ng-container para utilizar diretivas estruturais sem renderizar uma tag</p>
+
+<h2>Exibindo Options em um combobox</h2>
+
+<input type="checkbox" [(ngModel)]="exibirItens3e4"> Exibir itens 3, 4 e 5
+
+<div class="form-control">
+    <select>
+        <option>opção 1</option>
+        <option>opção 2</option>
+
+        <ng-container *ngIf="exibirItens3e4">
+            <option>opção 3</option>
+            <option>opção 4</option>
+            <option>opção 5</option>
+        </ng-container>
+
+        <option>opção 6</option>
+    </select>
+</div>
+

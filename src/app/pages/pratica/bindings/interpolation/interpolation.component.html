@@ -1,0 +1,46 @@
+<h1>Interpolation</h1>
+
+<p>É possível interpolar expressões dentro do template</p>
+
+
+<h2>Interpolando uma propriedade do Componente</h2>
+
+{{ valor }}
+
+
+
+<h2>Interpolando o retorno de um método do Componente</h2>
+
+{{ resultado() }}
+
+
+
+<h2>Interpolando uma expressão direto no template</h2>
+
+{{ "5 x 5 = " + (5 * 5) }}
+
+
+
+<h2>Interpolar uma expressão dentro de uma tag html</h2>
+
+<input type="{{ inputType }}" value="{{ inputValue }}"/>
+
+
+
+<h2>Interpolação com uso de pipes</h2>
+
+{{ nome | uppercase }}
+
+
+
+<h2>Interpolação com uso de pipes com parametros</h2>
+
+<p>nascimento: {{ nascimento | date:'dd/MM/YYYY' }}</p>
+
+<p>saldo na conta: {{ saldoNaConta | currency }}</p>
+
+
+<h2>Interpolação com Pipe customizado (reverse)</h2>
+
+<p>{{ texto | reverse }}</p>
+

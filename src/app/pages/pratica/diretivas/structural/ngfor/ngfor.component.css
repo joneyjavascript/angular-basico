@@ -1,0 +1,9 @@
+
+.odd {
+    background: #ddd;
+}
+
+ul li {
+    padding: 5px;
+    display:block;
+}

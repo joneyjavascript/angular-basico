@@ -1,0 +1,17 @@
+
+
+.tarefa-concluida {
+    text-decoration: line-through;
+}
+
+.tarefa-prioritaria {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.tarefa-prioritaria:after {
+    content: "*";
+    font-size: 20px;
+    color: gold;
+
+}
