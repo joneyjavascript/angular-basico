@@ -1,0 +1,14 @@
+<h1>Monitorar eventos do ciclo de vida de um componente</h1>
+
+<p>existem alguns métodos que são executados em determinado momento de vida de um componente</p>
+<p>São eles: ngOnInit, ngOnChanges, ngDoCheck, ngAfterContentInit, ngAfterContentChecked, ngAfterViewInit, ngAfterViewChecked, ngOnDestroy</p>
+
+<h2>Exemplo de log do ciclo de vida de um componente</h2>
+
+
+<button (click)="componenteVivo=true" *ngIf="!componenteVivo">Reviver componente</button>
+<button (click)="componenteVivo=false" *ngIf="componenteVivo">Destruir componente</button>
+<button (click)="alterarDados()" *ngIf="componenteVivo">Alterar dados aleatóriamente</button>
+
+<app-hooks-log [data]="dados" *ngIf="componenteVivo"></app-hooks-log>
+

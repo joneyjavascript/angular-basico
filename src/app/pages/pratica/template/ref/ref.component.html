@@ -1,6 +1,6 @@
 <h1>Template Ref</h1>
 
-<p>Podemos referenciar qualquer elemento do template usando # (hashtag)</p>
+<p>Podemos referenciar qualquer elemento dentro do template usando # (hashtag)</p>
 
 <h2>Template Ref #input1</h2>
 
@@ -9,11 +9,10 @@
 <p>Abaixo algumas propriedades do Elemento acima</p>
 
 <ul>
-    <li>type: {{ input1.type }}</li>
-    <li>innerHTML: {{ input1.innerHTML }}</li>
-    <li>value: {{ input1.value }}</li>
+    <li><strong>type:</strong> {{ input1.type }}</li>
+    <li><strong>innerHTML:</strong> {{ input1.innerHTML }}</li>
+    <li><strong>value:</strong> {{ input1.value }}</li>
 </ul>
-
 
 <hr />
 
@@ -23,6 +22,7 @@
     <p>Um conteúdo dinâmico que será carregado!</p>
 </div>
 
+<p>loadingComponent.show: {{ loadingComponent.show  }}</p>
 <button (click)="loadingComponent.show = true">Habilitar Loading</button>
 <button (click)="loadingComponent.show = false">Desabilitar Loading</button>
 
@@ -41,5 +41,5 @@
     </tr>
 </table>
 
-<button (click)="colunaD.colSpan = colunaD.colSpan - 1">- colSpan</button>
-<button (click)="colunaD.colSpan = colunaD.colSpan + 1">+ colSpan</button>
+<button (click)="colunaD.colSpan = colunaD.colSpan - 1">- colSpan (coluna D)</button>
+<button (click)="colunaD.colSpan = colunaD.colSpan + 1">+ colSpan (coluna D)</button>

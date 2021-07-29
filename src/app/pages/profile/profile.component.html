@@ -2,7 +2,7 @@
 <h1>Perfil</h1>
 
 <section>
-    <h2>Dados pessoais</h2>
+    <h2>Dados pessoais (usando serviço UserService com dados mockados)</h2>
 
     <div class="position-relative p10">
         <app-loading [show]="loadingProfile" [local]=true>Consultando dados do perfil, aguarde</app-loading>
@@ -25,7 +25,7 @@
 </section>
 
 <section>
-    <h2>Meus Pokemons</h2>
+    <h2>Meus Pokemons (Consumindo API Publica: <a href="https://pokeapi.co/" target="_blank">https://pokeapi.co/</a>)</h2>
 
     <div class="position-relative p10">
         <app-loading [show]="loadingPokemons" [local]="true">Consultando minha Pokedex, aguarde...</app-loading>
@@ -39,9 +39,11 @@
 </section>
 
 <section>
-    <h2>Meus Games</h2>
+    <h2>Meus Games (usando serviço GameService com dados mockados)</h2>
 
     <div class="position-relative p10">
+        <app-loading [show]="loadingGames" [local]="true">Consultando meus jogos, aguarde...</app-loading>
+
         <ul>
             <li *ngFor="let game of listaGames">
                 {{ game?.nome }} ({{ game?.ano }})

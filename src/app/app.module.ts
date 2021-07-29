@@ -34,6 +34,8 @@ import { NumericStepperComponent } from './pages/pratica/components/components/n
 import { NumericStepperTwoWayComponent } from './pages/pratica/components/components/numeric-stepper-two-way/numeric-stepper-two-way.component';
 import { NgContentComponent } from './pages/pratica/components/ng-content/ng-content.component';
 import { AreaComponent } from './pages/pratica/components/components/area/area.component';
+import { HooksLogComponent } from './pages/pratica/components/components/hooks-log/hooks-log.component';
+import { HooksComponent } from './pages/pratica/components/hooks/hooks.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { AreaComponent } from './pages/pratica/components/components/area/area.c
     NumericStepperComponent,
     NumericStepperTwoWayComponent,
     NgContentComponent,
-    AreaComponent
+    AreaComponent,
+    HooksLogComponent,
+    HooksComponent
   ],
   imports: [
     BrowserModule,

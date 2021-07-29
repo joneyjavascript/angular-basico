@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { finalize } from 'rxjs/operators';
 import { User } from 'src/app/class/user';
 import { GameService } from 'src/app/services/game.service';
 import { PokeApiService } from 'src/app/services/poke-api.service';
@@ -17,6 +18,7 @@ export class ProfileComponent implements OnInit {
   loadingPokemons = true;
   pokemons: any[] = [];
 
+  loadingGames = true;
   listaGames: any[];
 
   constructor(
@@ -42,7 +44,14 @@ export class ProfileComponent implements OnInit {
     })
 
 
-    this.listaGames = this.game.getGames();
+    this.loadingGames = true;
+    this.game.getGames().pipe(
+      finalize(() => this.loadingGames = false)
+    ).subscribe(games => {
+      this.listaGames = games;
+    }, error => {
+      console.error(error);
+    });
   }
 
 }

@@ -7,14 +7,14 @@ section {
    border: 1px solid #777;
 }
 
-section header {
+section header:not(:empty) {
     padding: 0px;
     margin: 0;
     font-size: 28px;
     margin-bottom: 10px;
 }
 
-section footer {
+section footer:not(:empty) {
     padding: 0;
     padding-top: 10px;
     padding-bottom: 10px;

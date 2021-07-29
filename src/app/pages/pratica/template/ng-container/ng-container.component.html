@@ -4,14 +4,14 @@
 
 <h2>Exibindo Options em um combobox</h2>
 
-<input type="checkbox" [(ngModel)]="exibirItens3e4"> Exibir itens 3, 4 e 5
+<input type="checkbox" [(ngModel)]="exibirItensDe3a5"> Exibir itens 3, 4 e 5
 
 <div class="form-control">
     <select>
         <option>opção 1</option>
         <option>opção 2</option>
 
-        <ng-container *ngIf="exibirItens3e4">
+        <ng-container *ngIf="exibirItensDe3a5">
             <option>opção 3</option>
             <option>opção 4</option>
             <option>opção 5</option>
