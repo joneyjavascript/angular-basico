@@ -1,4 +1,10 @@
-# TreinamentoBasicoAngular
+# Treinamento Basico Angular
+
+Projeto prático com uso de diferentes recursos do Framework Angular para fins de estudo dos conceitos básico.
+
+----------------
+
+# Projeto generated with Angular CLI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
