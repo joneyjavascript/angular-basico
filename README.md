@@ -1,6 +1,6 @@
 # Treinamento Basico Angular
 
-Projeto prático com uso de diferentes recursos do Framework Angular para fins de estudo dos conceitos básico.
+Projeto prático com uso de diferentes recursos do Framework Angular para fins de estudo.
 
 ![image](https://user-images.githubusercontent.com/2818123/127548877-c6b3fb45-2409-4e47-9d4e-58e9a64e11ed.png)
 
