@@ -2,6 +2,11 @@
 
 Projeto prático com uso de diferentes recursos do Framework Angular para fins de estudo dos conceitos básico.
 
+![image](https://user-images.githubusercontent.com/2818123/127548877-c6b3fb45-2409-4e47-9d4e-58e9a64e11ed.png)
+
+![image](https://user-images.githubusercontent.com/2818123/127548778-37a3bc8a-350c-4708-8643-d581cb96b736.png)
+
+
 ----------------
 
 # Projeto generated with Angular CLI
